@@ -4,6 +4,11 @@
 /.env.local.php
 /.env.*.local
 /config/secrets/prod/prod.decrypt.private.php
+<<<<<<< HEAD
+=======
+/public/bundles/
+/var/
+>>>>>>> ccd17e93bc23e24a208aed299073754e12e69221
 
 ###< symfony/framework-bundle ###
 
