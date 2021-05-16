@@ -1,0 +1,44 @@
+{% extends "base.html.twig" %}
+
+{% block main_content %}
+    <table class="table table-hover">
+        <tbody>
+        <tr>
+            <th scope="row">{{ 'form.book.title' | trans }}</th>
+            <td>{{ book.title }}</td>
+        </tr>
+        <tr>
+            <th scope="row">{{ 'form.book.author' | trans }}</th>
+            <td>{{ book.author }}</td>
+        </tr>
+        <tr>
+            <th scope="row">{{ 'form.book.publicationDate' | trans }}</th>
+            <td>{{ book.publicationDate|date('d-m-Y') }}</td>
+        </tr>
+        <tr>
+            <th scope="row">{{ 'form.book.isbn' | trans }}</th>
+            <td>{{ book.isbn }}</td>
+        </tr>
+        <tr>
+            <th scope="row">{{ 'form.book.price' | trans }}</th>
+            <td>{{ book.price }}</td>
+        </tr>
+        <tr>
+            <th scope="row">{{ 'form.book.description' | trans }}</th>
+            <td>{{ book.description }}</td>
+        </tr>
+        <tr>
+            <th scope="row">{{ 'form.book.urlPictureWithBookCover' | trans }}</th>
+            <td>{{ book.urlPictureWithBookCover }}</td>
+        </tr>
+        <tr>
+            <th scope="row">{{ 'form.book.status' | trans }}</th>
+            {% if (book.status) %}
+                <td>{{ 'form.book.available' | trans }}</td>
+            {% else %}
+                <td>{{ 'form.book.unavailable' | trans }}</td>
+            {% endif %}
+        </tr>
+        </tbody>
+    </table>
+{% endblock main_content %}

@@ -1,0 +1,20 @@
+form:
+  book:
+    title: Tytuł
+    author: Autor
+    publicationDate: Rok wydania
+    isbn: ISBN
+    isbnHelp: Dopuszczalne formaty isbn10, isbn13 np. 2-1234-5680-2 lub 978-2-1234-5680-3
+    price: Cena
+    description: Opis
+    urlPictureWithBookCover: Url obrazu z okładką
+    status: Status
+    available: Dostępny
+    unavailable: Niedostępny
+
+book:
+  details: Szczegóły
+  title: Tytuł
+  author: Autor
+  add: Dodaj książkę
+  list: Lista książek

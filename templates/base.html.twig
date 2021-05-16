@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block stylesheets %}
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}"/>
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/Style.css') }}"/>
+    {% endblock %}
+    {% block headerJavascripts %}
+        <script src="{{ asset('js/bootstrap/bootstrap.js') }}" type="text/javascript"></script>
+    {% endblock %}
+</head>
+<body>
+<div>
+    {% block body %}
+    <div class="row">
+        <div class="col-sm-1 margin-top-15">
+            <div class="padding-10">
+                <a href="{{ path('listBooks') }}">{{ 'book.list' | trans }}</a>
+            </div>
+            <div class="padding-10">
+                <a href="{{ path('addBook') }}">{{ 'book.add' | trans }}</a>
+            </div>
+        </div>
+        <div class="col-sm-11 margin-top-15">
+            <div class="padding-10">
+                {% block main_content %}
+
+                {% endblock main_content %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>
